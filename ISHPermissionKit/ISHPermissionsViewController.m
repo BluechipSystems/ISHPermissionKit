@@ -84,18 +84,18 @@
 - (void)loadView {
     UIView *view = nil;
     
-#ifdef __IPHONE_8_0
-    if (NSClassFromString(@"UIVisualEffectView") && (self.modalPresentationStyle != UIModalPresentationFormSheet)) {
-        view = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
-        [view setBounds:[[UIScreen mainScreen] bounds]];
-        [view setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
-        self.view = view;
-    }
-#endif
+//#ifdef __IPHONE_8_0
+//    if (NSClassFromString(@"UIVisualEffectView") && (self.modalPresentationStyle != UIModalPresentationFormSheet)) {
+//        view = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+//        [view setBounds:[[UIScreen mainScreen] bounds]];
+//        [view setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
+//        self.view = view;
+//    }
+//#endif
     
     if (!view) {
         [super loadView];
-        [self.view setBackgroundColor:[UIColor blackColor]];
+        [self.view setBackgroundColor:[UIColor colorWithWhite:0.000 alpha:0.400]];
     }
 }
 
